@@ -1,0 +1,541 @@
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&lt;!DOCTYPE html&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&lt;html lang="en"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&lt;head&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;meta charset="UTF-8"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;style&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; body {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background-color: #ffcccc;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; /* Valentine's Day color theme */
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; text-align: center;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; padding: 50px;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; overflow: hidden;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; /* Prevent scroll bars during animation */
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; button {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; padding: 10px 20px;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 16px;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin: 10px;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; #noButton {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; position: absolute;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; #sadEmoji {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; display: none;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 40px;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-top: 20px;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; #partyContainer {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; position: absolute;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; top: 0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; left: 0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; width: 100%;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; height: 100%;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; pointer-events: none;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; /* Allow interaction with elements behind */
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; .heart {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: #ff0000;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; position: absolute;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; animation: floatHeart 20s infinite ease-in-out;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; /* Adjusted animation duration */
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; opacity: 0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; /* Initially hidden */
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; .redText {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: #ff0000;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; cursor: pointer;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; text-decoration: underline;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; .blueText {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: #0000ff;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; cursor: pointer;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; text-decoration: underline;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; .greenText {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: #008000;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; cursor: pointer;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; text-decoration: underline;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; @keyframes floatHeart {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; 0% {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; transform: translateY(100vh) rotate(0);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; 50% {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; transform: translateY(-50vh) rotate(180deg);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; /* Make hearts float up the screen */
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; 100% {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; transform: translateY(0) rotate(360deg);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;/style&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&lt;/head&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&lt;body&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;h1&gt;Will you be my &lt;span class="redText" onclick="showLoveText()"&gt;valentine&lt;/span&gt;?&lt;/h1&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;div id="yesNoButtons"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; &lt;button id="yesButton" onclick="handleYesClick()"&gt;Yes&lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; &lt;button id="noButton" onclick="moveNoButton()"&gt;No&lt;/button&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;div id="sadEmoji"&gt;🥺&lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;div id="partyContainer"&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; &lt;!-- Generate 529 hearts with different sizes --&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; &lt;script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; for (let i = 0; i &lt; 529; i++) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const heartSize = Math.floor(Math.random() * 30) + 10; // Random size between 10 and 40
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const heartElement = document.createElement('span');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.className = 'heart';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.innerHTML = '❤️';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.style.fontSize = heartSize + 'px';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.style.animationDelay = (Math.random() * 5).toFixed(2) + 's'; // Randomize animation start (max delay of 5s)
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.getElementById('partyContainer').appendChild(heartElement);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; // Additional hearts at the end
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; for (let i = 0; i &lt; 200; i++) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const heartSize = Math.floor(Math.random() * 30) + 10;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const heartElement = document.createElement('span');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.className = 'heart';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.innerHTML = '❤️';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.style.fontSize = heartSize + 'px';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.style.left = Math.random() * 100 + 'vw';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; heartElement.style.animationDelay = (Math.random() * 5 + 5).toFixed(2) + 's'; // Additional delay
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.getElementById('partyContainer').appendChild(heartElement);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; &lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;/div&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; function handleYesClick() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; // Show congratulations and hearts when Yes is clicked
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.getElementById('partyContainer').style.display = 'block';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.getElementById('yesNoButtons').style.display = 'none';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.getElementById('sadEmoji').style.display = 'none';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const congratulationsText = document.createElement('div');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; congratulationsText.innerHTML = 'Congratulations!!! 🎉 You have got a hot and beautiful girl as your date this Valentine ❤️ (forever date remember that).';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; congratulationsText.style.fontSize = '22px';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.body.appendChild(congratulationsText);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const hearts = document.getElementsByClassName('heart');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; for (let i = 0; i &lt; hearts.length; i++) {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; hearts[i].style.opacity = 1;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; function moveNoButton() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; var noButton = document.getElementById('noButton');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; var sadEmoji = document.getElementById('sadEmoji');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; noButton.style.position = 'relative';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; noButton.style.left = Math.floor(Math.random() * 200) + 'px';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; noButton.innerHTML = 'You can\'t say no';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; sadEmoji.style.display = 'block';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; function showLoveText() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const loveText = document.createElement('div');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; loveText.innerHTML = 'I love you ❤️';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; loveText.style.fontSize = '24px';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; loveText.classList.add('redText'); // Set text color to red
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; loveText.onclick = function () {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; showLinkText();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.body.appendChild(loveText);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; function showLinkText() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const linkText = document.createElement('div');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; linkText.innerHTML = 'Go to this link ↩️';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; linkText.style.fontSize = '24px';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; linkText.classList.add('greenText'); // Set text color to green
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; linkText.onclick = function () {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; openLink();
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; };
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; document.body.appendChild(linkText);
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; function openLink() {
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; const url = 'https://drive.google.com/file/d/1BynLphygRhV2MP-lXe4qPl-_-JL-32bT/view';
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; window.open(url, '_blank');
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0; &lt;/script&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&lt;/body&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&lt;/html&gt;
+			</p>
+			<p style="margin-top:0pt; margin-bottom:0pt">
+				&#xa0;
+			</p>
+	<p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net" target="_blank" style="font-size:11px; color: #d0d0d0">Converted to HTML with WordToHTML.net</a></p>

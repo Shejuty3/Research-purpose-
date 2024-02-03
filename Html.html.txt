@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #ffcccc;
+      /* Valentine's Day color theme */
+      text-align: center;
+      padding: 50px;
+      overflow: hidden;
+      /* Prevent scroll bars during animation */
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+    }
+
+    #noButton {
+      position: absolute;
+    }
+
+    #sadEmoji {
+      display: none;
+      font-size: 40px;
+      margin-top: 20px;
+    }
+
+    #partyContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      /* Allow interaction with elements behind */
+    }
+
+    .heart {
+      color: #ff0000;
+      position: absolute;
+      animation: floatHeart 20s infinite ease-in-out;
+      /* Adjusted animation duration */
+      opacity: 0;
+      /* Initially hidden */
+    }
+
+    .redText {
+      color: #ff0000;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .blueText {
+      color: #0000ff;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .greenText {
+      color: #008000;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    @keyframes floatHeart {
+      0% {
+        transform: translateY(100vh) rotate(0);
+      }
+
+      50% {
+        transform: translateY(-50vh) rotate(180deg);
+        /* Make hearts float up the screen */
+      }
+
+      100% {
+        transform: translateY(0) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Will you be my <span class="redText" onclick="showLoveText()">valentine</span>?</h1>
+  <div id="yesNoButtons">
+    <button id="yesButton" onclick="handleYesClick()">Yes</button>
+    <button id="noButton" onclick="moveNoButton()">No</button>
+  </div>
+  <div id="sadEmoji">🥺</div>
+  <div id="partyContainer">
+    <!-- Generate 529 hearts with different sizes -->
+    <script>
+      for (let i = 0; i < 529; i++) {
+        const heartSize = Math.floor(Math.random() * 30) + 10; // Random size between 10 and 40
+        const heartElement = document.createElement('span');
+        heartElement.className = 'heart';
+        heartElement.innerHTML = '❤️';
+        heartElement.style.fontSize = heartSize + 'px';
+        heartElement.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+        heartElement.style.animationDelay = (Math.random() * 5).toFixed(2) + 's'; // Randomize animation start (max delay of 5s)
+        document.getElementById('partyContainer').appendChild(heartElement);
+      }
+
+      // Additional hearts at the end
+      for (let i = 0; i < 200; i++) {
+        const heartSize = Math.floor(Math.random() * 30) + 10;
+        const heartElement = document.createElement('span');
+        heartElement.className = 'heart';
+        heartElement.innerHTML = '❤️';
+        heartElement.style.fontSize = heartSize + 'px';
+        heartElement.style.left = Math.random() * 100 + 'vw';
+        heartElement.style.animationDelay = (Math.random() * 5 + 5).toFixed(2) + 's'; // Additional delay
+        document.getElementById('partyContainer').appendChild(heartElement);
+      }
+    </script>
+  </div>
+
+  <script>
+    function handleYesClick() {
+      // Show congratulations and hearts when Yes is clicked
+      document.getElementById('partyContainer').style.display = 'block';
+      document.getElementById('yesNoButtons').style.display = 'none';
+      document.getElementById('sadEmoji').style.display = 'none';
+
+      const congratulationsText = document.createElement('div');
+      congratulationsText.innerHTML = 'Congratulations!!! 🎉 You have got a hot and beautiful girl as your date this Valentine ❤️ (forever date remember that).';
+      congratulationsText.style.fontSize = '22px';
+      document.body.appendChild(congratulationsText);
+
+      const hearts = document.getElementsByClassName('heart');
+      for (let i = 0; i < hearts.length; i++) {
+        hearts[i].style.opacity = 1;
+      }
+    }
+
+    function moveNoButton() {
+      var noButton = document.getElementById('noButton');
+      var sadEmoji = document.getElementById('sadEmoji');
+
+      noButton.style.position = 'relative';
+      noButton.style.left = Math.floor(Math.random() * 200) + 'px';
+      noButton.innerHTML = 'You can\'t say no';
+      sadEmoji.style.display = 'block';
+    }
+
+    function showLoveText() {
+      const loveText = document.createElement('div');
+      loveText.innerHTML = 'I love you ❤️';
+      loveText.style.fontSize = '24px';
+      loveText.classList.add('redText'); // Set text color to red
+      loveText.onclick = function () {
+        showLinkText();
+      };
+      document.body.appendChild(loveText);
+    }
+
+    function showLinkText() {
+      const linkText = document.createElement('div');
+      linkText.innerHTML = 'Go to this link ↩️';
+      linkText.style.fontSize = '24px';
+      linkText.classList.add('greenText'); // Set text color to green
+      linkText.onclick = function () {
+        openLink();
+      };
+      document.body.appendChild(linkText);
+    }
+
+    function openLink() {
+      const url = 'https://drive.google.com/file/d/1BynLphygRhV2MP-lXe4qPl-_-JL-32bT/view';
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+
+</html>
